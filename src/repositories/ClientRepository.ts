@@ -4,7 +4,7 @@ export class ClientRepository {
   private clients: Client[];
   private static INSTANCE: ClientRepository;
 
-  constructor() {
+  private constructor() {
     this.clients = [];
   }
 
