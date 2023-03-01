@@ -2,6 +2,7 @@ import { Router } from "express";
 import { createAccountController } from "../useCases/createAccount";
 import { depositController } from "../useCases/depositAccount";
 import { getAllAccountController } from "../useCases/getAllAccounts";
+import { withDrawController } from "../useCases/withDrawAccount";
 
 const accountRouter = Router();
 
@@ -15,6 +16,10 @@ accountRouter.get("/accounts", (req, res) => {
 
 accountRouter.post("/accounts/deposit", (req, res) =>
   depositController.handle(req, res)
+);
+
+accountRouter.post("/accounts/with-draw", (req, res) =>
+  withDrawController.handle(req, res)
 );
 
 export default accountRouter;
