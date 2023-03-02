@@ -9,7 +9,7 @@ interface IDeposit {
 
 export class AccountRepository {
   private accounts: Account[];
-  private static INSTANCE: AccountRepository;
+  protected static INSTANCE: AccountRepository;
 
   constructor() {
     this.accounts = [];
