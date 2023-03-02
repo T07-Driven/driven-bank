@@ -36,11 +36,11 @@ export class AccountRepository {
     account.balance += value;
   }
 
-  withDraw({ userId, accountNumber, value }: IDeposit): void {
-    this.validAccount(userId, accountNumber).balance -= value;
+  withDraw(account: Account, value: number): void {
+    account.balance -= value;
   }
 
-  private validAccount(userId: string, accountNumber: string): Account {
+  validAccount(userId: string, accountNumber: string): Account {
     const account = this.accounts.find((item) => item.number === accountNumber);
     if (!account) throw new Error("Account not found");
     if (account.userId !== userId)
