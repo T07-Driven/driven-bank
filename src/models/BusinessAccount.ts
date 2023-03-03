@@ -1,7 +1,7 @@
 import { Account } from "./Account";
 
 export class BusinessAccount extends Account {
-  cnpj: string;
+  public cnpj: string;
 
   constructor(
     number: string,
