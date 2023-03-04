@@ -1,5 +1,5 @@
 import { v4 as uuidV4 } from "uuid";
-import { BusinessAccountRepository } from "../../repositories/BusinessAccountRepository";
+import { BusinessAccountRepository } from "../../repositories/implementations/BusinessAccountRepository";
 
 interface IRequest {
   agency: string;

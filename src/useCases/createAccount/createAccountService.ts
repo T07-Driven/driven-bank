@@ -1,7 +1,7 @@
-import { AccountRepository } from "../../repositories/AccountRepository";
 import { v4 as uuidV4 } from "uuid";
+import { AccountRepository } from "../../repositories/implementations/AccountRepository";
 
-interface IRequest {
+interface IRequest { // DTO
   agency: string;
   balance: number;
   userId: string;

@@ -1,4 +1,4 @@
-import { BusinessAccount } from "../models/BusinessAccount";
+import { BusinessAccount } from "../../models/BusinessAccount";
 import { AccountRepository } from "./AccountRepository";
 
 export class BusinessAccountRepository extends AccountRepository {

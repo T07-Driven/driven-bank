@@ -1,4 +1,4 @@
-import { BusinessAccountRepository } from "../../repositories/BusinessAccountRepository";
+import { BusinessAccountRepository } from "../../repositories/implementations/BusinessAccountRepository";
 import { CreateBusinessAccountController } from "./createBusinessAccountController";
 import { CreateBusinessAccountService } from "./createBusinessAccountService";
 

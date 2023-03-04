@@ -1,4 +1,4 @@
-import { ClientRepository } from "../../repositories/ClientRepository";
+import { AbstractClientRepository } from "../../repositories/AbstractClientRepository";
 
 interface IRequest {
   id: string;
@@ -7,7 +7,7 @@ interface IRequest {
 }
 
 export class GetAllClientService {
-  constructor(private clientRpository: ClientRepository) {}
+  constructor(private clientRpository: AbstractClientRepository) {}
 
   excute(): IRequest[] {
     return this.clientRpository.getAll();

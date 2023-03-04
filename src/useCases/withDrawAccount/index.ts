@@ -1,4 +1,4 @@
-import { AccountRepository } from "../../repositories/AccountRepository";
+import { AccountRepository } from "../../repositories/implementations/AccountRepository";
 import { WithDrawController } from "./withDrawController";
 import { WithDrawService } from "./withDrawService";
 

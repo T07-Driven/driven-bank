@@ -1,10 +1,12 @@
-import { Client } from "../models/Clients";
+import { Client } from "../../models/Clients";
+import { AbstractClientRepository } from "../AbstractClientRepository";
 
-export class ClientRepository {
+export class ClientRepository extends AbstractClientRepository {
   private clients: Client[];
   private static INSTANCE: ClientRepository;
 
   private constructor() {
+    super();
     this.clients = [];
   }
 

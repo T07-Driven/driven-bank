@@ -1,4 +1,5 @@
-import { ClientRepository } from "../../repositories/ClientRepository";
+
+import { ClientRepository } from "../../repositories/implementations/ClientRepository";
 import { GetAllClientsController } from "./getAllClientController";
 import { GetAllClientService } from "./getAllClientService";
 
