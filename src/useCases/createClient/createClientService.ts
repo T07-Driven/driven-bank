@@ -7,7 +7,7 @@ interface IRequest {
 }
 
 export class CreateClientService {
-  constructor(private clientRepository: AbstractClientRepository) {}
+  constructor(private clientRepository: AbstractClientRepository<string>) {}
 
   execute({ name, age }: IRequest) {
     const id = uuidV4();
@@ -17,6 +17,8 @@ export class CreateClientService {
       .find((item) => item.name === name);
 
     if (clientNameExist) throw new Error("Client already exists");
+
+    if (!id || !name || !age) throw new Error("Error model Client");
 
     this.clientRepository.create({ id, name, age });
   }

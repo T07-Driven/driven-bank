@@ -7,7 +7,7 @@ interface IRequest {
 }
 
 export class GetAllClientService {
-  constructor(private clientRpository: AbstractClientRepository) {}
+  constructor(private clientRpository: AbstractClientRepository<string>) {}
 
   excute(): IRequest[] {
     return this.clientRpository.getAll();

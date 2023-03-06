@@ -1,6 +1,6 @@
 import { Client } from "../models/Clients";
 
-export abstract class AbstractClientRepository {
-  abstract create({ id, name, age }: Client): void;
-  abstract getAll(): Client[];
+export abstract class AbstractClientRepository<T> {
+  abstract create({ id, name, age }: Client<T>): void;
+  abstract getAll(): Client<T>[];
 }
