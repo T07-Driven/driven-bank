@@ -1,13 +1,21 @@
+import prisma from "../../database/db";
 import { Client } from "../../models/Clients";
 import { AbstractClientRepository } from "../AbstractClientRepository";
 
 export class ClientRepositoryPg extends AbstractClientRepository<number> {
-    
-    create({ id, name, age }: Client<number>): void {
-        throw new Error("Method not implemented.");
-    }
-    getAll(): Client<number>[] {
-        throw new Error("Method not implemented.");
-    }
-    
+  constructor() {
+    super();
+  }
+
+  async create({ name, age }: Client<number>): Promise<void> {
+    await prisma.clients.create({
+      data: {
+        name,
+        age,
+      },
+    });
+  }
+  async getAll(): Promise<Client<number>[]> {
+    return await prisma.clients.findMany();
+  }
 }

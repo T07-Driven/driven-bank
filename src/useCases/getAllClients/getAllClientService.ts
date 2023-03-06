@@ -1,15 +1,10 @@
-import { AbstractClientRepository } from "../../repositories/AbstractClientRepository";
-
-interface IRequest {
-  id: string;
-  name: string;
-  age: string;
-}
+import { Client } from "../../models/Clients";
+import { AbstractClientRepository, IClientDTO } from "../../repositories/AbstractClientRepository";
 
 export class GetAllClientService {
-  constructor(private clientRpository: AbstractClientRepository<string>) {}
+  constructor(private clientRpository: AbstractClientRepository<number>) {}
 
-  excute(): IRequest[] {
-    return this.clientRpository.getAll();
+  async excute(): Promise<IClientDTO<number>[]> {
+    return await this.clientRpository.getAll();
   }
 }
