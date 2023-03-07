@@ -1,10 +1,11 @@
 # S.O.L.I.D
-SOLID são cinco princípios de desenvolvimento de software, diretrizes a serem seguidas ao criar software para facilitar o dimensionamento e a manutenção. Eles se tornaram populares por um engenheiro de software, Robert C. Martin.
+SOLID são cinco princípios de desenvolvimento de software, são diretrizes a serem seguidas ao criar software para facilitar o dimensionamento e a manutenção. Eles se tornaram populares por um engenheiro de software, Robert C. Martin.
 
 ## S - Single Responsibility (Responsabilidade Única)
 > Conceito teórico: Uma classe deve ter uma única responsabilidade
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*P3oONz9Da3Tc1w97fMV73Q.png)
+
 Se uma classe tiver muitas responsabilidades, aumenta a possibilidade de bugs, pois alterar uma de suas responsabilidades pode afetar as outras sem que você saiba.
 
 ### Exemplo no Driven Bank
@@ -14,8 +15,8 @@ Nossos casos de uso são um exemplo disso. Cada um é responsável por apenas um
 > Conceito teórico: As classes devem ser abertas para extensão, mas fechadas para modificação
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*0MtFBmm6L2WVM04qCJOZPQ.png)
-Uma Classe tem que estar aberta para ser extendida e fechada para ser alterada.
 
+Uma Classe tem que estar aberta para ser extendida e fechada para ser alterada.
 Se você deseja que a classe execute mais funções, a abordagem ideal é adicionar às funções que já existem, NÃO alterá-las.
 
 ### Exemplo no Driven Bank
@@ -23,10 +24,11 @@ Nossa conexão aos repositórios passa por uma interface que diz quais comportam
 
 A mesma coisa acontece com o Chrome, quando você adiciona uma extensão, não é necessário ir no código fonte do Chrome, para conseguir usar essa extenção, o código base não é alterado, a "interface" extende uma nova funcionalidade.
 
-## L — Liskov Substitution
+## L — Liskov Substitution (Substituição de Liskov)
 > Conceito teórico: Se S é um subtipo de T, então os objetos do tipo T em um programa podem ser substituídos por objetos do tipo S sem alterar nenhuma das propriedades desejáveis desse programa.
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*yKk2XKJaCLNlDxQMx1r55Q.png)
+
 Quando uma classe filha não pode executar as mesmas ações que sua classe pai, isso pode causar bugs.
 
 Se você tiver uma classe e criar outra classe a partir dela, ela se tornará pai e a nova classe se tornará filha. A classe filha deve ser capaz de fazer tudo o que a classe pai pode fazer. Este processo é chamado de Herança.
@@ -61,6 +63,7 @@ Nesse projeto nós criamos as interfaces para nossos Repositórios implementarem
 > Conceito teórico: Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender da abstração. As abstrações não devem depender de detalhes. Detalhes devem depender de abstrações.
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Qk8tDmjQlyvwKxNTfXIo0Q.png)
+
 Em primeiro lugar, vamos definir os termos usados aqui de forma mais simples
 
 Módulo(ou Classe) de alto nível: Classe que executa uma ação com uma ferramenta.
@@ -81,3 +84,4 @@ Nossos casos de uso não conseguem acessar os repositórios sem passar por nossa
 ## Fontes bibliográficas:
 - [SOLID fica FÁCIL com Essas Ilustrações](https://www.youtube.com/watch?v=6SfrO3D4dHM)
 - Esse acima vídeo usa esse [artigo](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+- Livro: Arquitetura Limpa - Robert C. Martin
